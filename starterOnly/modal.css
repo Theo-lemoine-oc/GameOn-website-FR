@@ -156,6 +156,19 @@ main {
 
 /* Modal form */
 
+
+/* Error messages */
+
+.hidden {
+    display: none !important;
+}
+
+.errorMsg {
+    display: block;
+    color: rgb(255, 0, 0);
+    font-size: 1.2rem;
+}
+
 .button {
     background: #fe142f;
     margin-top: 0.5em;
