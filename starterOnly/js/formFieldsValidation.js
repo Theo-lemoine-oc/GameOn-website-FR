@@ -7,7 +7,6 @@ const quantity = document.getElementById('quantity');
 const locations = document.querySelectorAll('#allLocations .checkbox-input');
 const cgu = document.getElementById('checkbox1');
 const form = document.getElementById('form')
-const modalBg = document.querySelector(".bground");
 
 
 // regex
@@ -95,7 +94,7 @@ function checkTournamentCity() {
     return false;
 }
 
-// chu checked
+// cgu checked
 function checkCgu() {
     const cguError = document.getElementById('cguError');
 
@@ -108,7 +107,7 @@ function checkCgu() {
     }
 }
 
-
+// check valid fields
 const isFormValid = () => checkFirstName() && checkLastName() && checkEmail() && checkBirthdate() && checkTournament() && checkTournamentCity() && checkCgu();
 
 
@@ -117,6 +116,7 @@ form.addEventListener('submit', function(e) {
     e.preventDefault();
     // if all booleans are true
     if (isFormValid()) {
+        displayModalSubmit();
         modalbg.style.display = "none";
         form.reset();
     }
